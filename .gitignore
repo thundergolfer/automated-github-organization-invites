@@ -1,3 +1,6 @@
+# IGNORE CREDENTIALS FILE
+creds.rb
+
 *.gem
 *.rbc
 /.config
