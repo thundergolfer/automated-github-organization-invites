@@ -1,0 +1,16 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  height: 80%;
+  margin-top: 10%;
+}
+
+.avatar {
+  border-radius: 3px;
+}
+
+.input_box, .button {
+  border-radius: 5px;
+}
