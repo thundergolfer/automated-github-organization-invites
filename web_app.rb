@@ -22,6 +22,8 @@ else
     background_css = "/css/background_colors/white.css"
 end
 
+html_template_path = File.join(__dir__, 'views', 'index.slim')
+@layout = File.read(html_template_path)
 
 client = Octokit::Client.new(access_token: token)
 
@@ -50,44 +52,16 @@ def check_org_exists(client, org_name)
   return false
 end
 
-@layout =<<EOS
-
-doctype html
-html
-  head
-    title Registration
-    link href="/css/bootstrap.css" rel="stylesheet" type="text/css"
-    link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"
-    link href="/css/custom.css" rel="stylesheet" type="text/css"
-    link href==background_css rel="stylesheet" type="text/css"
-    link rel="shortcut icon" href="/favicon.ico"
-  body
-    div class="container container-table"
-      div class="row vertical-center-row"
-        div class="text-center col-md-4 col-md-offset-4"
-          img{class="avatar" src==avatar height='100px' width='100px'}
-          h1 Get GitHub Invite To
-          h2 =org_name
-          form action="add" method="POST"
-            p Please enter your GitHub username
-            p
-              input.input_box name="github"
-            p
-              input.button type="submit" value="Add me to organization"
-EOS
-
-@post_text = "post text"
+# The URL for the Organisation's picture/avatar
 avatar = get_org_avatar_url(client, org_name)
 
 l = Slim::Template.new { @layout }
 
+# ROUTES #
+
 get "/" do
   slim l.render(Object.new, :avatar => avatar, :org_name => org_name, :background_css => background_css)
 end
-
-#get "/" do
-  #slim :index
-#end
 
 post "/add" do
   if user_exists?(client, params["github"])
