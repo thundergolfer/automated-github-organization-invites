@@ -2,6 +2,10 @@
 
 > Quickly host a webpage allow people to click and receive and invite to your Github Organization
 
+<p align="center">
+  <img src="auto-invites-example.png"/>
+</p>
+
 ### Features
 
 * Validates submitted Github usernames
