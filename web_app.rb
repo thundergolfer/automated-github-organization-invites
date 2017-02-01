@@ -65,7 +65,7 @@ end
 
 post "/add" do
   if user_exists?(client, params["github"])
-    client.add_team_membership(org_id, params["github"])
+    client.add_team_membership(org_name, params["github"])
     "OK, Check your EMAIL"
   end
   "User not found. Please check your spelling"
