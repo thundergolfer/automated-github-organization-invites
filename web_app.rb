@@ -54,6 +54,15 @@ def get_org_id(client, org_name)
   end
 end
 
+def get_org_teams(client, org_name)
+  begin
+    teams = client.org_teams(org_name)
+    return teams
+  rescue Octokit::NotFound
+    return nil
+  end
+end
+
 def check_org_exists(client, org_name)
   unless get_org_avatar_url(client, org_name).nil?
     return true
@@ -75,7 +84,7 @@ end
 
 post "/add" do
   if user_exists?(client, params["github"])
-    client.add_team_membership(org_id, params["github"])
+    client.update_organization_membership(org_name, :user => params["github"])
     "OK, Check your EMAIL"
   end
   "User not found. Please check your spelling"
