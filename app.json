@@ -9,8 +9,8 @@
       "description": "A Github access token to activate the Octokit Github Client",
       "value": null
     },
-    "ORGANISATION_NAME": {
-      "description": "You can confirm it by going to your org's dashboard. The URL will be: https://github.com/orgs/{ORGANISATION_NAME}/dashboard",
+    "ORGANIZATION_NAME": {
+      "description": "You can confirm it by going to your org's dashboard. The URL will be: https://github.com/orgs/{ORGANIZATION_NAME}/dashboard",
       "value": null
     },
     "BACKGROUND_COLOR": {

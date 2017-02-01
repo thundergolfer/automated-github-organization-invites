@@ -5,7 +5,7 @@ require 'slim'
 require 'octokit'
 
 token = ENV['GITHUB_TOKEN']
-org_name = ENV['ORGANISATION_NAME']
+org_name = ENV['ORGANIZATION_NAME']
 background_choice = ENV['BACKGROUND_COLOR']
 
 if background_choice == 'green'
@@ -45,6 +45,15 @@ def get_org_avatar_url(client, org_name)
   org[:avatar_url]
 end
 
+def get_org_id(client, org_name)
+  begin
+    org = client.user(org_name)
+    return org.id
+  rescue Octokit::NotFound
+    return nil
+  end
+end
+
 def check_org_exists(client, org_name)
   unless get_org_avatar_url(client, org_name).nil?
     return true
@@ -54,6 +63,7 @@ end
 
 # The URL for the Organisation's picture/avatar
 avatar = get_org_avatar_url(client, org_name)
+org_id = get_org_id(client, org_name)
 
 l = Slim::Template.new { @layout }
 
@@ -65,7 +75,7 @@ end
 
 post "/add" do
   if user_exists?(client, params["github"])
-    client.add_team_membership(org_name, params["github"])
+    client.add_team_membership(org_id, params["github"])
     "OK, Check your EMAIL"
   end
   "User not found. Please check your spelling"
