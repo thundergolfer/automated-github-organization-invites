@@ -19,3 +19,8 @@ All you have to do is
 
 #### All Done! Just share the Heroku App's URL to people and they'll be able to get themselves an invite to your organisation.
 
+
+#### Credit To *[Code, Applied To Life](https://medium.com/code-applied-to-life/automated-github-organization-invites-3e940aa27040#.sikfvzyaj)* for their efforts which were used as a base for this.
+
+
+
