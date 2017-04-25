@@ -1,2 +1,5 @@
+JavaScript: true
+Ruby: true
+
 exclude_paths:
 - "public/"
