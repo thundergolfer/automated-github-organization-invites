@@ -1,4 +1,4 @@
-# Automated Github Organization Invites
+# Automated Github Organization Invites [![Code Climate](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/gpa.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites) [![Issue Count](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/issue_count.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites)
 
 > Quickly host a webpage allow people to click and receive and invite to your Github Organization
 
