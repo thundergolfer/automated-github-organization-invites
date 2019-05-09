@@ -10,7 +10,7 @@ html, body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     height: 100%;
     justify-content: center;
