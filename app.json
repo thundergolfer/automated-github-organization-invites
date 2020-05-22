@@ -15,12 +15,13 @@
     },
     "TEAM_NAME": {
       "description": "(OPTIONAL) Set default team to join. You can confirm it by going to your team's page. The URL will be: \"https://github.com/orgs/{ORGANIZATION_NAME}/teams/{TEAM_NAME}\"",
-      "value": null,
+      "value": "",
       "required": false
     },
     "BACKGROUND_COLOR": {
-      "description": "Background color for front page. Can be one of [grey, white, blue, green, red, pink]",
-      "value": null
+      "description": "Background color for front page. Can be one of [grey, white, blue, green, red, pink]. Default is white.",
+      "value":  "",
+      "required": false
     }
   }
 }
