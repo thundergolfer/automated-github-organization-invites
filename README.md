@@ -1,9 +1,7 @@
 # Automated Github Organization (and Team) Invites
 [![Code Climate](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/gpa.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites) [![Issue Count](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/issue_count.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites)
 
-:::warning
-Work in progress to add default team! App is in non-functioning state now.
-:::
+> :warning: Work in progress to add default team! App is in non-functioning state now.
 
 > Quickly host a webpage allow people to click and receive and invite to your Github Organization. WIP: adding option to set default team of new member.
 
