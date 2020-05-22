@@ -95,7 +95,8 @@ end
 
 post "/add" do
   if user_exists?(client, params["github-user"])
-    team_id = get_team_id(client, org_name, team_name)
+    # team_id = get_team_id(client, org_name, team_name)
+    team_id = nil
     if team_id.nil?
       # team was blank or could not be found, just add user to org
       client.update_organization_membership(org_name, :user => params["github-user"])
