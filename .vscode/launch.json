@@ -5,6 +5,16 @@
   "version": "0.2.0",
   "configurations": [
   {
+    "name": "RSpec - all",
+    "type": "Ruby",
+    "request": "launch",
+    "program": "${workspaceRoot}/bin/rspec",
+    "args": [
+      "-I",
+      "${workspaceRoot}"
+    ]
+  },
+  {
     "name": "Debug Local File2",
     "type": "Ruby",
     "request": "launch",
