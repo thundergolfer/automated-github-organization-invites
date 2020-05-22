@@ -1,5 +1,5 @@
 {
-  "name": "Automated Github Org+Team Invites (dev-branch)",
+  "name": "Automated Github Org+Team Invites",
   "description": "Out-of-the-box solution to automatic Github Organization (and team) invitations",
   "repository": "https://github.com/yoshikawa-laboratory/automated-github-organization-and-team-invites",
   "logo": "https://avatars3.githubusercontent.com/u/65348955?s=400&u=81ddfe21cda9ca2631ec11c455c6b8eece022dee&v=4",
@@ -10,12 +10,13 @@
       "value": null
     },
     "ORGANIZATION_NAME": {
-      "description": "You can confirm it by going to your org's dashboard. The URL will be: https://github.com/orgs/{ORGANIZATION_NAME}/dashboard",
+      "description": "You can confirm it by going to your org's dashboard. The URL will be: \"https://github.com/orgs/{ORGANIZATION_NAME}/dashboard\"",
       "value": null
     },
     "TEAM_NAME": {
-      "description": "You can confirm it by going to your team's page. The URL will be: https://github.com/orgs/{ORGANIZATION_NAME}/teams/{TEAM_NAME}",
-      "value": null
+      "description": "(OPTIONAL) Set default team to join. You can confirm it by going to your team's page. The URL will be: \"https://github.com/orgs/{ORGANIZATION_NAME}/teams/{TEAM_NAME}\"",
+      "value": null,
+      "required": false
     },
     "BACKGROUND_COLOR": {
       "description": "Background color for front page. Can be one of [grey, white, blue, green, red, pink]",
