@@ -6,6 +6,7 @@ require 'octokit'
 
 token = ENV['GITHUB_TOKEN']
 org_name = ENV['ORGANIZATION_NAME']
+team_name = ENV['TEAM_NAME']
 background_choice = ENV['BACKGROUND_COLOR']
 
 if background_choice == 'green'
