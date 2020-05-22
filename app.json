@@ -19,7 +19,7 @@
       "required": false
     },
     "BACKGROUND_COLOR": {
-      "description": "Background color for front page. Can be one of [grey, white, blue, green, red, pink]",
+      "description": "Background color for front page. Can be one of [grey, white, blue, green, red, pink]. Default is white.",
       "value":  "",
       "required": false
     }
