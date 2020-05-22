@@ -1,8 +1,8 @@
 {
   "name": "Automated Github Org+Team Invites",
   "description": "Out-of-the-box solution to automatic Github Organization (and team) invitations",
-  "repository": "https://github.com/yoshikawa-laboratory/automated-github-organization-and-team-invites",
-  "logo": "https://avatars3.githubusercontent.com/u/65348955?s=400&u=81ddfe21cda9ca2631ec11c455c6b8eece022dee&v=4",
+  "repository": "https://github.com/thundergolfer/automated-github-organization-invites",
+  "logo": "https://avatars0.githubusercontent.com/u/12058921?v=3&u=e6f7435e0e4c399c1b43abf37e3c9c2918910fd4&s=400",
   "keywords": ["github", "automation", "github organization", "team", "invite"],
   "env": {
     "GITHUB_TOKEN": {
