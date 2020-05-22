@@ -1,7 +1,7 @@
 # Automated Github Organization (and Team) Invites
 [![Code Climate](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/gpa.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites) [![Issue Count](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/issue_count.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites)
 
-> Quickly host a webpage allow people to click and receive and invite to your Github Organization and a default team (optional).
+> Quickly host a webpage to allow people to click and receive an invite to your Github Organization and an (optional) default team.
 
 <p align="center">
   <img src="auto-invites-example.png"/>
@@ -27,6 +27,3 @@ All you have to do is
 
 
 #### Credit To *[Code, Applied To Life](https://medium.com/code-applied-to-life/automated-github-organization-invites-3e940aa27040#.sikfvzyaj)* for their efforts which were used as a base for this.
-
-
-
