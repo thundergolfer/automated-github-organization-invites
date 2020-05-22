@@ -1,9 +1,7 @@
 # Automated Github Organization (and Team) Invites
 [![Code Climate](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/gpa.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites) [![Issue Count](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites/badges/issue_count.svg)](https://codeclimate.com/github/thundergolfer/automated-github-organization-invites)
 
-> :warning: **Work in progress to add default team! This fork is in a non-functioning state now.**
-
-> Quickly host a webpage allow people to click and receive and invite to your Github Organization. WIP: adding option to set default team of new member.
+> Quickly host a webpage allow people to click and receive and invite to your Github Organization and a default team (optional).
 
 <p align="center">
   <img src="auto-invites-example.png"/>
@@ -14,6 +12,7 @@
 * Validates submitted Github usernames
 * Links in your Github Organization's avatar/image
 * Lightweight
+* Optionally auto-invite to a team inside the organization
 
 ### Get It Right Now
 
@@ -22,7 +21,7 @@
 All you have to do is
 
 1. Click **Deploy to Heroku**
-2. Fill in the **Environment Variables** when prompted. These will be a *[Github Access Token](https://github.com/blog/1509-personal-api-tokens)*, which should have Organisation priviledges enabled, and a *Github Organisation name*, and a *background color*. The choices are `{blue,green,grey,pink,red,white}`. If you don't enter one of those strings it defaults to 'white'.
+2. Fill in the **Environment Variables** when prompted. These will be a *[Github Access Token](https://github.com/blog/1509-personal-api-tokens)*, which should have Organization privileges enabled, and a *GitHub Organization name*, and a *background color*. The choices are `{blue,green,grey,pink,red,white}`. If you don't enter one of those strings it defaults to 'white'. Lastly an optional *GitHub Organization team* can also be specified if you want your users to auto-join a default team.
 
 #### All Done! Just share the Heroku App's URL to people and they'll be able to get themselves an invite to your organisation.
 
