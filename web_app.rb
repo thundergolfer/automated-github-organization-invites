@@ -6,6 +6,7 @@ require 'octokit'
 
 token = ENV['GITHUB_TOKEN']
 org_name = ENV['ORGANIZATION_NAME']
+team_name = ENV['TEAM_NAME']
 background_choice = ENV['BACKGROUND_COLOR']
 
 if background_choice == 'green'
@@ -70,6 +71,12 @@ def check_org_exists(client, org_name)
   return false
 end
 
+def get_team(client, org_name, team_name)
+  teams = client.org_teams(org_name)
+  team = teams.find {|t| t.slug.downcase == team_name.downcase }    
+  return team
+end
+
 # The URL for the Organisation's picture/avatar
 avatar = get_org_avatar_url(client, org_name)
 org_id = get_org_id(client, org_name)
@@ -83,9 +90,17 @@ get "/" do
 end
 
 post "/add" do
-  if user_exists?(client, params["github"])
-    client.update_organization_membership(org_name, :user => params["github"])
-    "OK, Check your EMAIL"
+  if user_exists?(client, params["github-user"])
+    team = get_team(client, org_name, team_name)    
+    if team.nil?
+      # team was blank or could not be found, just add user to org
+      client.update_organization_membership(org_name, :user => params["github-user"])
+      "Sent invite to join '" + org_name + "', Check your EMAIL"
+    else
+      # team_id valid so invite member directly to org's team
+      client.add_team_membership(team.id, params["github-user"])      
+      "Sent invite to join '" + org_name + "' and team '" + team_name + "', Check your EMAIL"
+    end
   else
     "User not found. Please check your spelling"
   end
