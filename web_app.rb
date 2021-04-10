@@ -81,7 +81,7 @@ end
 def add_user_to_org(client, username)
   begin
     client.update_organization_membership(ORG_NAME, :user => params["github-user"])
-    "Sent invite to join '" + ORG_NAME + "', Check your EMAIL"
+    "Sent invite to join '#{ORG_NAME}', Check your EMAIL"
   rescue Octokit::ClientError => e
     "Error: #{e.class}. #{e.message}"
   end
@@ -90,7 +90,7 @@ end
 def add_user_to_team_in_org(client, username, team_id)
   begin
     client.add_team_membership(team.id, username)
-    "Sent invite to join '" + ORG_NAME + "' and team '" + TEAM_NAME + "', Check your EMAIL"
+    "Sent invite to join '#{ORG_NAME}' and team '#{TEAM_NAME}', Check your EMAIL"
   rescue Octokit::ClientError => e
     "Error: #{e.class}. #{e.message}"
   end
