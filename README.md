@@ -25,6 +25,19 @@ All you have to do is
 
 #### All Done! Just share the Heroku App's URL to people and they'll be able to get themselves an invite to your organisation.
 
+### Development
+
+**Install:** 
+
+```
+bundle install
+```
+
+**Run Locally:**
+
+```bash
+ORGANIZATION_NAME="foo" GITHUB_TOKEN="bar"  bundle exec ruby web_app.rb
+```
 
 ### Credit 
 
