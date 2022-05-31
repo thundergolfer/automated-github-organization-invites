@@ -89,7 +89,7 @@ end
 
 def add_user_to_team_in_org(client, username, team_id)
   begin
-    client.add_team_membership(team.id, username)
+    client.add_team_membership(team_id, username)
     "Sent invite to join '#{ORG_NAME}' and team '#{TEAM_NAME}', Check your EMAIL"
   rescue Octokit::ClientError => e
     "Error: #{e.class}. #{e.message}"
